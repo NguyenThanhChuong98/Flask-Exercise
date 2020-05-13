@@ -1,5 +1,1 @@
-/config.pyc
-/app/forms.pyc
-/app/__init__.pyc
-/app/microblog.pyc
-/app/routes.pyc
+*.pyc
