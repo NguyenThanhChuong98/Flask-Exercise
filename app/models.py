@@ -24,7 +24,7 @@ class User(UserMixin,db.Model):
 	followed = db.relationship(
 		'User',secondary = followers,
 		primaryjoin = (followers.c.follower_id == id),
-		secondaryjoin = (followers.c.follower_id == id),
+		secondaryjoin = (followers.c.followed_id == id),
 		backref = db.backref('followers', lazy = 'dynamic'),lazy='dynamic')
 
 	def __repr__(self):

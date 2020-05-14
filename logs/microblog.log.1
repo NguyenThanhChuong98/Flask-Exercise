@@ -1,61 +1,4 @@
-2020-05-13 15:39:04,879 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 15:39:22,974 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 15:39:46,254 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 17:09:27,372 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 17:13:23,144 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 17:16:21,970 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 17:25:43,457 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 17:26:06,627 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 17:27:07,471 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 17:27:12,234 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 17:28:15,197 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 17:28:17,549 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 17:30:23,531 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 17:37:25,299 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 17:37:27,792 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 17:43:14,202 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 17:43:28,776 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 17:43:44,262 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 18:03:34,247 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 18:03:39,718 ERROR: Exception on /user/chuong123 [GET] [in /home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py:1892]
-Traceback (most recent call last):
-  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/chuong/Desktop/microblog/app/routes.py", line 79, in user
-    return render_template('user.html',user=user,posts =posts)
-  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 127, in load
-    code = environment.compile(source, name, filename)
-  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 638, in compile
-    self.handle_exception(source=source_hint)
-  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/home/chuong/Desktop/microblog/app/templates/user.html", line 17, in template
-    {% endif not current_user.is_following(user) %}
-jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got 'not'
-2020-05-13 18:04:16,463 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 18:04:28,605 ERROR: Exception on /edit_profile [GET] [in /home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+2020-05-13 18:17:32,224 ERROR: Exception on /edit_profile [GET] [in /home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -78,11 +21,18 @@ Traceback (most recent call last):
   File "/home/chuong/Desktop/microblog/app/forms.py", line 36, in __init__
     if user is not None:
 NameError: name 'user' is not defined
-2020-05-13 18:08:08,493 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 18:08:51,777 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 18:09:22,624 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 18:15:41,005 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
-2020-05-13 18:15:43,320 ERROR: Exception on /edit_profile [GET] [in /home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+2020-05-13 18:31:35,812 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
+2020-05-13 18:35:55,102 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
+2020-05-13 18:36:48,676 ERROR: Exception on /follow/chuong [GET] [in /home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: followers.followed_id
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
   File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -98,11 +48,86 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/chuong/Desktop/microblog/app/routes.py", line 90, in edit_profile
-    form = EditProfileForm(current_user.username)
-  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/wtforms/form.py", line 208, in __call__
-    return type.__call__(cls, *args, **kwargs)
-  File "/home/chuong/Desktop/microblog/app/forms.py", line 36, in __init__
-    if user is not None:
-NameError: name 'user' is not defined
-2020-05-13 18:17:30,024 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
+  File "/home/chuong/Desktop/microblog/app/routes.py", line 111, in follow
+    current_user.follow(user)
+  File "/home/chuong/Desktop/microblog/app/models.py", line 44, in follow
+    if not self.is_following(user):
+  File "/home/chuong/Desktop/microblog/app/models.py", line 52, in is_following
+    return self.followed.filter(followers.c.followed_id  == user.id).count() >0
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3669, in count
+    return self.from_self(col).scalar()
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3393, in scalar
+    ret = self.one()
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3360, in one
+    ret = self.one_or_none()
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3329, in one_or_none
+    ret = list(self)
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3405, in __iter__
+    return self._execute_and_instances(context)
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3430, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
+    distilled_params,
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: followers.followed_id
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.about_me AS users_about_me, users.last_seen AS users_last_seen 
+FROM users, followers 
+WHERE followers.follower_id = ? AND followers.follower_id = users.id AND followers.followed_id = ?) AS anon_1]
+[parameters: (3, 2)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-05-14 08:57:41,455 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
+2020-05-14 09:04:13,732 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
+2020-05-14 09:29:57,225 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
+2020-05-14 09:30:01,440 ERROR: Exception on /index [GET] [in /home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/chuong/Desktop/microblog/app/routes.py", line 21, in index
+    form = PostForm()
+NameError: name 'PostForm' is not defined
+2020-05-14 09:30:26,762 ERROR: Exception on /index [GET] [in /home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/chuong/Desktop/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/chuong/Desktop/microblog/app/routes.py", line 21, in index
+    def index():
+NameError: name 'PostForm' is not defined
+2020-05-14 09:30:45,330 INFO: Microblog startup [in /home/chuong/Desktop/microblog/app/__init__.py:46]
