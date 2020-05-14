@@ -1,4 +1,7 @@
 from datetime import datetime
+from time import time
+import jwt
+from app import app
 from app import db
 from app import login
 from hashlib import md5
@@ -52,10 +55,24 @@ class User(UserMixin,db.Model):
 		return self.followed.filter(followers.c.followed_id  == user.id).count() >0
 
 	def followed_posts(self):
-		followed = Post.query.join(
-			followers,(followers.c.followed_id == Post.user_id)).filter(followers.c.follower_id == self.id)
+		followed = Post.query.join(followers,(followers.c.followed_id == Post.user_id)).filter(followers.c.follower_id == self.id)
 		own = Post.query.filter_by(user_id = self.id)
 		return Post.query.join(followers,(followers.c.follower_id == Post.user_id)).filter(followers.c.follower_id == self.id).order_by(Post.timestamp.desc())
+
+	def get_reset_password_token(self,expires_in = 600):
+		return jwt.encode(
+			{'reset_password' : self.id, 'exp' : time() + expires_in},
+			app.config['SECRET_KEY'],algorithms=['HS256']).decode('utf-8')
+
+@staticmethod
+def verify_reset_password_token(token):
+	try:
+		id = jwt.decode(token,app.config['SECRET_KEY'],algorithms=['HS256'])['reset_password']
+	except:
+		return
+	return User.query.get(id)
+			
+
 class Post(db.Model):
 
 	__tablename__ = "posts"
