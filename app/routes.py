@@ -31,7 +31,7 @@ def index():
 		flash('Your post is now live!')
 		return redirect(url_for('index'))
 	posts = current_user.followed_posts().all()
-	return render_template("index.html",title='Home Page',form=form,posts=posts)
+	return render_template('index.html',title='Home Page',form=form,posts=posts)
 	page = requests.args.get('page',1,type=int)
 	posts = current_user.followed_posts().paginate(page,app.config['POST_PER_PAGE'],False)
 	return render_templat('index.html',title='Home',form=form,posts=posts.items)
