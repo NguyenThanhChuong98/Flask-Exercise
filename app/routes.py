@@ -2,6 +2,8 @@ from flask import render_template
 from flask import request
 from flask import redirect, url_for
 from flask import flash 
+from flask import g
+from flask_babel import get_locale
 from werkzeug.urls import url_parse
 from app import app
 from app import db
@@ -102,7 +104,7 @@ def before_request():
 	if current_user.is_authenticated:
 		current_user.last_seen = datetime.utcnow()
 		db.session.commit()
-
+		g.locale = str(get_locale())
 
 @app.route('/edit_profile',methods=['GET','POST'])
 @login_required
