@@ -14,3 +14,4 @@ class Config(object):
 	ADMINS = ['you-email@example.com']
 	POST_PER_PAGE = 25
 	LANGUAGES = ['en','es']
+	
