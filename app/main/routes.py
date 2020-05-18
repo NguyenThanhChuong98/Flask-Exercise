@@ -76,6 +76,12 @@ def user(username):
     return render_template('user.html', user=user, posts=posts.items,
                            next_url=next_url, prev_url=prev_url, form=form)
 
+@bp.route('/user/<username>/popup')
+@login_required
+def user_popup(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    return render_template('user_popup.html', user=user)
+
 
 @bp.route('/edit_profile', methods=['GET', 'POST'])
 @login_required
@@ -144,10 +150,4 @@ def search():
         if total > page * current_app.config['POST_PER_PAGE'] else None
     prev_url = url_for('main.search',q=g.search.form.q.data,page = page -1)\
         if total > 1 else None
-    return render_template('search.html',title=_(Search),posts=posts,next_url=next_url,prev_url=prev_url)
-# @bp.route('/translate', methods=['POST'])
-# @login_required
-# def translate_text():
-#     return jsonify({'text': translate(request.form['text'],
-#                                       request.form['source_language'],
-#                                       request.form['dest_language'])})
+    return render_template('search.html',title=_('Search'),posts=posts,next_url=next_url,prev_url=prev_url)
