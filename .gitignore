@@ -1,3 +1,7 @@
 *.pyc
-../venv
-../logs
+venv/
+.venv
+logs
+__pycache__/
+*.log
+*.pot
