@@ -27,7 +27,7 @@ guess-language-spirit==0.5.3
 httpie==2.1.0
 idna==2.9
 ipdb==0.13.2
-ipython==5.10.0
+ipython==7.16.3
 ipython-genutils==0.2.0
 itsdangerous==1.1.0
 jedi==0.17.0
